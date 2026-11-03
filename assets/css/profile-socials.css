@@ -2,3 +2,12 @@
 .profile-socials .contact-icons { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.7rem; font-size: 1.65rem; }
 .profile-socials .contact-icons a { margin: 0; }
 .profile-socials .contact-icons a:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 3px; }
+.post article .clearfix p strong { font-weight: 800; }
+.news td:first-child { white-space: nowrap; }
+.news td:first-child strong { font-weight: 800; font-size: 1.05em; color: inherit; }
+.post article h2#news {
+  margin-top: 4rem;
+}
+.post article h2:has(+ .publications) {
+  margin-top: 4rem;
+}
