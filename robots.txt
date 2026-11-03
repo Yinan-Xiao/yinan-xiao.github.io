@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://yinan-xiao.github.io/sitemap.xml
