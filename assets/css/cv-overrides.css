@@ -1,0 +1,8 @@
+.cv .date-column {
+  transform: translateY(4px);
+}
+
+.cv ul.cv-bullet-list {
+  list-style: disc;
+  padding-inline-start: 1.5rem;
+}
