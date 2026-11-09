@@ -1,0 +1,55 @@
+.adrfr-video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.adrfr-video-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  background: var(--global-card-bg-color);
+}
+
+.adrfr-video-card video,
+.adrfr-video-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: #fff;
+  object-fit: contain;
+}
+
+.adrfr-video-card-body {
+  padding: 1rem 1.1rem 1.1rem;
+}
+
+.adrfr-video-index {
+  color: var(--global-theme-color);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.adrfr-video-card h3 {
+  margin: 0.35rem 0 0;
+  font-size: 1.1rem;
+  line-height: 1.35;
+}
+
+.adrfr-video-caption {
+  margin: -1.25rem 0 2.5rem;
+  color: var(--global-text-color);
+  font-size: 0.9rem;
+  font-style: italic;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .adrfr-video-grid {
+    grid-template-columns: 1fr;
+  }
+}

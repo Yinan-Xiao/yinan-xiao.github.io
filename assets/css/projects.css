@@ -1,0 +1,240 @@
+.projects .card figure {
+  aspect-ratio: 4 / 3;
+  margin: 0;
+  overflow: hidden;
+}
+
+.projects .card figure picture,
+.projects .card figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.projects .card figure img {
+  object-fit: cover;
+}
+
+.projects .card .card-title {
+  font-size: 2.0rem;
+  line-height: 1.35;
+}
+
+.projects .card .card-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.project-video {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 1rem;
+}
+
+.project-video figure {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+}
+
+.project-video iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.project-gallery {
+  margin: 1.5rem 0;
+}
+
+.project-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 0.75rem;
+}
+
+.project-gallery-column {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.75rem;
+}
+
+.project-gallery-grid--balanced {
+  align-items: stretch;
+}
+
+.project-gallery-grid--balanced .project-gallery-column {
+  justify-content: space-between;
+}
+
+.project-gallery-thumb {
+  display: block;
+  flex: 0 0 auto;
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0.25rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.project-gallery-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+  transition: opacity 160ms ease;
+}
+
+.project-gallery-thumb:hover img {
+  opacity: 0.85;
+}
+
+.bridge-carousel {
+  position: relative;
+  margin: 1.5rem 0;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  background: rgb(0 0 0 / 8%);
+}
+
+.bridge-carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.bridge-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.bridge-carousel-slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  margin: 0;
+  scroll-snap-align: start;
+}
+
+.bridge-carousel-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.bridge-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  transform: translateY(-50%);
+  border: 1px solid rgb(255 255 255 / 55%);
+  border-radius: 50%;
+  color: #fff;
+  background: rgb(0 0 0 / 55%);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.bridge-carousel-previous {
+  left: 0.75rem;
+}
+
+.bridge-carousel-next {
+  right: 0.75rem;
+}
+
+.bridge-carousel-status {
+  position: absolute;
+  right: 0;
+  bottom: 0.5rem;
+  left: 0;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px #000;
+  pointer-events: none;
+}
+
+.project-gallery-thumb:focus-visible,
+.project-gallery-viewer button:focus-visible,
+.bridge-carousel button:focus-visible {
+  outline: 3px solid var(--global-theme-color);
+  outline-offset: 3px;
+}
+
+.project-gallery-viewer {
+  position: relative;
+  width: min(94vw, 1200px);
+  max-width: none;
+  max-height: 92vh;
+  padding: 3rem 0 2.5rem;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+}
+
+.project-gallery-viewer::backdrop {
+  background: rgb(0 0 0 / 88%);
+}
+
+.project-gallery-viewer > img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(92vh - 5.5rem);
+  margin: auto;
+  object-fit: contain;
+}
+
+.project-gallery-viewer button {
+  position: absolute;
+  z-index: 1;
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 55%);
+  border-radius: 50%;
+  color: #fff;
+  background: rgb(0 0 0 / 55%);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.project-gallery-viewer .project-gallery-close {
+  top: 0;
+  right: 0;
+}
+
+.project-gallery-viewer .project-gallery-arrow {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.project-gallery-viewer .project-gallery-previous {
+  left: 0.75rem;
+}
+
+.project-gallery-viewer .project-gallery-next {
+  right: 0.75rem;
+}
+
+.project-gallery-status {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  text-align: center;
+}
+
+@media (max-width: 575px) {
+  .project-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
