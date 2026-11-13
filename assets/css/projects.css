@@ -82,6 +82,11 @@
   cursor: pointer;
 }
 
+.project-gallery-featured {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
 .project-gallery-thumb img {
   display: block;
   width: 100%;
@@ -92,6 +97,17 @@
 
 .project-gallery-thumb:hover img {
   opacity: 0.85;
+}
+
+.project-gallery-animation {
+  margin: 1.5rem 0;
+}
+
+.project-gallery-animation img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
 }
 
 .bridge-carousel {
